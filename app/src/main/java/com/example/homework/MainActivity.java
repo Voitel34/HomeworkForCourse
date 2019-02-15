@@ -1,5 +1,6 @@
 package com.example.homework;
 
+import android.content.Intent;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
             if (!isInputValid()){
                 Toast.makeText(getApplicationContext(), s1, Toast.LENGTH_LONG).show();
             }
+            Intent GoToNextScreen = new Intent(MainActivity.this, SecondActivity.class);
+            GoToNextScreen.putExtra(SecondActivity.TEXT_FOR_TRANSFER, s1);
+            startActivity(GoToNextScreen);
         }
     };
     private boolean isInputValid (){
