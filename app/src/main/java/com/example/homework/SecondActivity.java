@@ -1,7 +1,10 @@
 package com.example.homework;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,6 +15,13 @@ public class SecondActivity extends AppCompatActivity {
 
     private TextView mText2;
     private Button mButton2;
+    private View.OnClickListener mButtonToSearch = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com/#q=" + mText2.getText().toString()));
+            startActivity(browser);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +33,7 @@ public class SecondActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         mText2.setText(bundle.getString(TEXT_FOR_TRANSFER));
+
+        mButton2.setOnClickListener(mButtonToSearch);
     }
 }

@@ -10,4 +10,6 @@ The second screen now opens when you click on the button on the first screen.
 In the text field of the second screen we transfer the contents of the text field of the first screen.  
 By clicking on the Button, nothing happens yet.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-4. In process...
+4. In the fourth commit, a gradient was added as a background for two screens.  
+Clicking on the button of the second screen opens a browser with a google.com page with a search word embedded in the text that is displayed in text field.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
